@@ -1,0 +1,65 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+body {
+  font-family: "Inter", "Noto Sans TC", -apple-system, sans-serif;
+  background: #FBFCFD;
+  color: #0F172A;
+}
+
+/* Sidebar nav items */
+.dc-nav-item { transition: background 0.15s, color 0.15s; }
+.dc-nav-item:hover { background: #F4F6FA !important; }
+.dc-nav-item.active:hover { background: #DCF4E5 !important; }
+
+/* Sidebar show items */
+.dc-show-item { transition: background 0.15s; }
+.dc-show-item:hover { background: #F4F6FA !important; }
+
+/* Clickable cards (homepage entry cards, card list items) */
+.dc-card-hover { transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.dc-card-hover:hover {
+  border-color: #10A45A !important;
+  box-shadow: 0 6px 18px -8px rgba(16,164,90,0.2), 0 0 0 3px #DCF4E5 !important;
+  transform: translateY(-1px);
+}
+
+/* Dark card (random review entry) */
+.dc-card-dark-hover { transition: box-shadow 0.15s, transform 0.15s; }
+.dc-card-dark-hover:hover {
+  box-shadow: 0 8px 24px -8px rgba(16,164,90,0.4) !important;
+  transform: translateY(-1px);
+}
+
+/* Table rows */
+.dc-row-hover { transition: background 0.15s; }
+.dc-row-hover:hover { background: #FAFBFE !important; }
+
+/* Buttons */
+.dc-btn { transition: opacity 0.15s, transform 0.1s; }
+.dc-btn:hover { opacity: 0.85; }
+.dc-btn:active { transform: scale(0.97); }
+
+/* Primary buttons (green) */
+.dc-btn-primary { transition: box-shadow 0.15s, transform 0.1s; }
+.dc-btn-primary:hover { box-shadow: 0 6px 20px -6px rgba(16,164,90,0.5) !important; }
+.dc-btn-primary:active { transform: scale(0.97); }
+
+/* Icon buttons (speaker, edit, delete) */
+.dc-icon-btn { transition: background 0.15s, color 0.15s; border-radius: 6px; }
+.dc-icon-btn:hover { background: #F4F6FA !important; color: #10A45A !important; }
+
+/* Netflix link button */
+.dc-netflix-btn { transition: background 0.15s, border-color 0.15s; }
+.dc-netflix-btn:hover { background: #EEF1F6 !important; border-color: #94A0B5 !important; }
+
+/* Chip hover */
+.dc-chip-hover { transition: background 0.15s; }
+.dc-chip-hover:hover { filter: brightness(0.95); }
+
+/* Search bar */
+.dc-search:hover { border-color: #10A45A !important; }
+.dc-search { transition: border-color 0.15s; }
+
+/* Sidebar footer links */
+.dc-footer-link { transition: color 0.15s; }
+.dc-footer-link:hover { color: #10A45A !important; }

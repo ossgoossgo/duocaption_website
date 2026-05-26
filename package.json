@@ -1,0 +1,23 @@
+{
+  "name": "duocaption-website",
+  "version": "1.0.0",
+  "description": "DuoCaption review website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.42",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.3"
+  }
+}
