@@ -54,24 +54,27 @@
   }
   </script>
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JE866XF1C"></script>
+  <!-- Google Analytics (GA4) — only on external website, skip in extension -->
   <script>
-    // 開發模式（extension 內）不送 GA 事件
-    try {
-      var isDev = typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getManifest && !('update_url' in chrome.runtime.getManifest());
-    } catch(e) { var isDev = false; }
-    window['ga-disable-G-2JE866XF1C'] = isDev;
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2JE866XF1C');
+    (function() {
+      var isExtension = typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id;
+      if (isExtension) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2JE866XF1C';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-2JE866XF1C');
+    })();
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-DpuqDdNA.js"></script>
+  <script type="module" crossorigin src="/assets/index-gcQMYz80.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-B0AUI4Qx.css">
 </head>
 <body>
