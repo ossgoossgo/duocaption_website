@@ -71,18 +71,9 @@
     })();
   </script>
 
-  <!-- Google AdSense — only on external website, skip in extension -->
-  <script>
-    (function() {
-      var isExtension = typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id;
-      if (isExtension) return;
-      var s = document.createElement('script');
-      s.async = true;
-      s.crossOrigin = 'anonymous';
-      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5435059853156928';
-      document.head.appendChild(s);
-    })();
-  </script>
+  <!-- Google AdSense — extension CSP will block this automatically -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5435059853156928"
+     crossorigin="anonymous"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
